@@ -43,8 +43,6 @@ directory=$(tpin p "$1")
 if [ $? -eq 0 ]; then
     # Change to the specified directory
     cd "$directory"
-else
-    exit 1
 fi
 
 # generously provided by chatgpt
