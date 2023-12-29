@@ -26,5 +26,29 @@ if ($LastExitCode -eq 0) {
 }
 ```
 
+# the script but i'm on linux now
+```bash
+#!/bin/bash
+
+# Check if the number of arguments is correct
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 <argument>"
+    exit 1
+fi
+
+# Get the directory using tpin
+directory=$(tpin p "$1")
+
+# Check if tpin returns 0
+if [ $? -eq 0 ]; then
+    # Change to the specified directory
+    cd "$directory"
+else
+    exit 1
+fi
+
+# generously provided by chatgpt
+```
+
 # also
 also it requires nightly so that's fun
