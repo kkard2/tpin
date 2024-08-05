@@ -1,5 +1,3 @@
-#![feature(absolute_path)]
-
 #[macro_use]
 extern crate serde_derive;
 
@@ -20,25 +18,25 @@ fn cli() -> Command {
         .subcommand_required(true)
         .subcommands([
             Command::new("new")
-                .alias("n")
+                .visible_alias("n")
                 .about("Create new/replace existing alias")
                 .arg(arg!(<alias> "Alias to create"))
                 .arg_required_else_help(true)
                 .arg(arg!(<path> "Path to create alias for"))
                 .arg_required_else_help(true),
             Command::new("delete")
-                .alias("d")
+                .visible_alias("d")
                 .about("Delete alias")
                 .arg(arg!(<alias> "Alias to delete"))
                 .arg_required_else_help(true),
             Command::new("list").alias("l").about("List all aliases"),
             Command::new("print")
-                .alias("p")
+                .visible_alias("p")
                 .about("Print alias to stdout")
                 .arg(arg!(<alias> "Alias to print"))
                 .arg_required_else_help(true),
             Command::new("run")
-                .alias("r")
+                .visible_alias("r")
                 .about("Run alias")
                 .arg(arg!(<alias> "Alias to run"))
                 .arg_required_else_help(true),

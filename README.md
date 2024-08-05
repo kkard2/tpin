@@ -5,12 +5,13 @@ goofy ahh alias thingy
 i don't know why you want to use this, but here you go
 (yes this is `tpin help` output):
 ```
-new, n     Create new/replace existing alias
-delete, d  Delete alias
-list, l    List all aliases
-print, p   Print alias to stdout
-run, r     Run alias
-help       Print this message or the help of the given subcommand(s)
+Commands:
+  new     Create new/replace existing alias [aliases: n]
+  delete  Delete alias [aliases: d]
+  list    List all aliases
+  print   Print alias to stdout [aliases: p]
+  run     Run alias [aliases: r]
+  help    Print this message or the help of the given subcommand(s)
 
 Options:
   -h, --help  Print help
